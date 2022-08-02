@@ -1,0 +1,21 @@
+.env
+# Logs
+logs
+*.log
+npm-debug.log*
+# Documentation
+docs
+*.md
+# Dependency directories
+node_modules
+
+# Optional npm cache directory
+.npm
+# Git file
+.git
+# Docker file
+*Dockerfile*
+*docker-compose*
+# Deploy folder and file
+deploy
+.gitlab-ci.yml

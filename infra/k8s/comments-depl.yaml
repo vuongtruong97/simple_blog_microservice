@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: comments-deployment
+spec:
+    selector:
+        matchLabels:
+            app: comments
+    replicas: 1
+    template:
+        metadata:
+            labels:
+                app: comments
+        spec:
+            containers:
+                - name: comments
+                  image: 0866500635/blog_comments
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: comments-clusterip-srv
+spec:
+    selector:
+        app: comments
+    type: ClusterIP
+    ports:
+        - name: comments
+          protocol: TCP
+          port: 4001
+          targetPort: 4001

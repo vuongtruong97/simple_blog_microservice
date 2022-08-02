@@ -1,0 +1,7 @@
+
+## install ingress nginx for window
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.3.0/deploy/static/provider/cloud/deploy.yaml
+
+## install skaffold for window with chocolatey
+choco install -y skaffold
+
